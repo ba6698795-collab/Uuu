@@ -24,7 +24,6 @@
             margin: 0 auto;
         }
 
-        /* ========== الألوان المتحركة للشريط العلوي ========== */
         @keyframes colorChange {
             0% { background: linear-gradient(135deg, #ff6b6b, #4ecdc4); }
             10% { background: linear-gradient(135deg, #ff9f4b, #ff6b6b); }
@@ -51,7 +50,6 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
 
-        /* ========== صفحة تسجيل الدخول ========== */
         .login-page {
             min-height: 100vh;
             display: flex;
@@ -133,7 +131,6 @@
             height: 18px;
         }
 
-        /* ========== الشريط العلوي ========== */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -205,7 +202,6 @@
             border: none;
         }
 
-        /* ========== معلومات المستخدم ========== */
         .user-info {
             background: #1a1a1a;
             border-radius: 30px;
@@ -255,80 +251,6 @@
             font-size: 13px;
         }
 
-        /* ========== نافذة الاشتراك ========== */
-        .subscription-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 2000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .subscription-modal.active {
-            display: flex;
-        }
-
-        .subscription-content {
-            background: #1a1a1a;
-            border-radius: 40px;
-            padding: 30px 25px;
-            max-width: 300px;
-            width: 90%;
-            text-align: center;
-        }
-
-        .subscription-icon {
-            font-size: 60px;
-            margin-bottom: 15px;
-        }
-
-        .subscription-title {
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .subscription-days {
-            color: #ffa502;
-            font-size: 50px;
-            font-weight: bold;
-            margin: 15px 0;
-        }
-
-        .subscription-label {
-            color: #888;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
-
-        .subscription-date {
-            color: #4ecdc4;
-            font-size: 15px;
-            margin-bottom: 20px;
-            padding: 10px;
-            background: #222;
-            border-radius: 30px;
-        }
-
-        .subscription-close {
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            color: white;
-            border: none;
-            padding: 15px;
-            border-radius: 30px;
-            width: 100%;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* ========== لوحة المطور (تظهر فقط للمطور) ========== */
         .developer-menu {
             background: #1a1a1a;
             border-radius: 25px;
@@ -370,122 +292,35 @@
             gap: 8px;
         }
 
-        /* ========== صفحة إدارة النشر ========== */
-        .publish-page {
-            display: none;
-            background: #1a1a1a;
-            border-radius: 30px;
-            padding: 20px;
+        .upload-area {
             margin-bottom: 20px;
         }
 
-        .publish-page.active {
+        .upload-btn {
+            width: 100%;
+            height: 55px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            border: none;
+            border-radius: 28px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 5px 20px rgba(255,107,107,0.3);
+        }
+
+        .main-page {
+            display: none;
+        }
+
+        .main-page.active {
             display: block;
         }
 
-        .publish-page h2 {
-            color: white;
-            font-size: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .publish-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
-            max-height: 400px;
-            overflow-y: auto;
-            padding: 5px;
-        }
-
-        .publish-item {
-            background: #222;
-            border-radius: 20px;
-            padding: 12px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            border: 2px solid transparent;
-            transition: 0.2s;
-            cursor: pointer;
-        }
-
-        .publish-item.selected {
-            border-color: #4ecdc4;
-            background: #2a2a2a;
-        }
-
-        .publish-thumb {
-            width: 100%;
-            height: 80px;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-        }
-
-        .publish-name {
-            color: white;
-            font-size: 12px;
-            text-align: center;
-            word-break: break-word;
-        }
-
-        .publish-checkbox {
-            width: 24px;
-            height: 24px;
-            border-radius: 12px;
-            background: #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        .publish-item.selected .publish-checkbox {
-            background: #4ecdc4;
-            content: "✓";
-        }
-
-        .publish-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .publish-btn {
-            flex: 1;
-            padding: 15px;
-            border: none;
-            border-radius: 28px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .publish-btn.primary {
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            color: white;
-        }
-
-        .publish-btn.secondary {
-            background: #333;
-            color: white;
-        }
-
-        .selected-count {
-            color: #4ecdc4;
-            font-size: 14px;
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        /* ========== صفحة إنشاء حساب (تظهر فقط للمطور) ========== */
         .create-user-page {
             display: none;
             background: #1a1a1a;
@@ -558,33 +393,6 @@
             cursor: pointer;
         }
 
-        .back-from-create-btn:hover {
-            color: #4ecdc4;
-        }
-
-        /* ========== زر رفع المقاطع (يظهر فقط للمطور) ========== */
-        .upload-area {
-            margin-bottom: 20px;
-        }
-
-        .upload-btn {
-            width: 100%;
-            height: 55px;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            border: none;
-            border-radius: 28px;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 5px 20px rgba(255,107,107,0.3);
-        }
-
-        /* ========== صفحة رفع المقاطع مع تحديد متعدد (للمطور فقط) ========== */
         .upload-page {
             display: none;
             background: #1a1a1a;
@@ -710,13 +518,118 @@
             color: #4ecdc4;
         }
 
-        /* ========== شبكة المقاطع ========== */
-        .main-page {
+        .publish-page {
             display: none;
+            background: #1a1a1a;
+            border-radius: 30px;
+            padding: 20px;
+            margin-bottom: 20px;
         }
 
-        .main-page.active {
+        .publish-page.active {
             display: block;
+        }
+
+        .publish-page h2 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .publish-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 5px;
+        }
+
+        .publish-item {
+            background: #222;
+            border-radius: 20px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid transparent;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .publish-item.selected {
+            border-color: #4ecdc4;
+            background: #2a2a2a;
+        }
+
+        .publish-thumb {
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .publish-name {
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            word-break: break-word;
+        }
+
+        .publish-checkbox {
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+            background: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .publish-item.selected .publish-checkbox {
+            background: #4ecdc4;
+            content: "✓";
+        }
+
+        .publish-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .publish-btn {
+            flex: 1;
+            padding: 15px;
+            border: none;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .publish-btn.primary {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+        }
+
+        .publish-btn.secondary {
+            background: #333;
+            color: white;
+        }
+
+        .selected-count {
+            color: #4ecdc4;
+            font-size: 14px;
+            text-align: center;
+            margin: 10px 0;
         }
 
         .stats {
@@ -786,6 +699,7 @@
         .play-icon {
             color: white;
             font-size: 18px;
+            cursor: pointer;
         }
 
         .delete-icon {
@@ -816,7 +730,78 @@
             opacity: 0.8;
         }
 
-        /* ========== نافذة عرض كلمة المرور ========== */
+        .subscription-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subscription-modal.active {
+            display: flex;
+        }
+
+        .subscription-content {
+            background: #1a1a1a;
+            border-radius: 40px;
+            padding: 30px 25px;
+            max-width: 300px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .subscription-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .subscription-title {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subscription-days {
+            color: #ffa502;
+            font-size: 50px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .subscription-label {
+            color: #888;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .subscription-date {
+            color: #4ecdc4;
+            font-size: 15px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #222;
+            border-radius: 30px;
+        }
+
+        .subscription-close {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 30px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
         .password-modal {
             display: none;
             position: fixed;
@@ -911,7 +896,6 @@
             width: 100%;
         }
 
-        /* ========== نافذة الخروج ========== */
         .exit-modal {
             display: none;
             position: fixed;
@@ -974,15 +958,49 @@
             background: #333;
             color: white;
         }
+        
+        .storage-info {
+            background: #222;
+            border-radius: 20px;
+            padding: 12px;
+            margin-bottom: 15px;
+            color: #888;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .storage-bar {
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        
+        .storage-used {
+            height: 100%;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            width: 0%;
+            border-radius: 4px;
+        }
+        
+        .clear-storage-btn {
+            background: #333;
+            color: #ff6b6b;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <!-- الشريط العلوي المتحرك (يظهر بعد تسجيل الدخول) -->
     <div class="animated-header" id="animatedHeader" style="display: none;">
-        ✨ حصريات - أجمل منصة فيديو ✨
+        ✨ حصريات - المطور غير محدود ✨
     </div>
 
-    <!-- صفحة تسجيل الدخول -->
     <div class="login-page" id="loginPage">
         <div class="login-card">
             <div class="login-header">
@@ -992,23 +1010,21 @@
             
             <form id="loginForm">
                 <div class="input-group">
-                    <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" required>
+                    <input type="email" id="loginEmail" placeholder="البريد الإلكتروني" value="x@x1xxx.com" required>
                 </div>
                 <div class="input-group">
-                    <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+                    <input type="password" id="loginPassword" placeholder="كلمة المرور" value="1z5b" required>
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="rememberMe" checked>
                     <label for="rememberMe">تذكرني</label>
                 </div>
-                <button type="submit" class="login-btn">دخول</button>
+                <button type="submit" class="login-btn">دخول المطور</button>
             </form>
         </div>
     </div>
 
-    <!-- الصفحة الرئيسية (بعد تسجيل الدخول) -->
     <div class="container" id="mainApp" style="display: none;">
-        <!-- الشريط العلوي -->
         <div class="navbar">
             <div class="logo">حصريات</div>
             <div class="user-area">
@@ -1021,7 +1037,6 @@
             </div>
         </div>
 
-        <!-- معلومات المستخدم مع العداد -->
         <div class="user-info" id="subscriptionInfo">
             <div class="info-item">
                 <span>👤</span>
@@ -1034,14 +1049,21 @@
             </div>
         </div>
 
-        <!-- رسالة ترحيب -->
-        <div class="alert" id="welcomeAlert" style="background: rgba(46, 213, 115, 0.1); border: 1px solid #2ed573; color: #2ed573; padding: 12px; border-radius: 30px; margin-bottom: 20px; text-align: center; display: none;">
-            ✅ تم تسجيل الدخول بنجاح
+        <div class="storage-info" id="storageInfo">
+            <div>
+                <span>💾 المساحة المستخدمة: <span id="usedStorage">0</span> MB من ~50 MB</span>
+                <button class="clear-storage-btn" id="clearStorageBtn">🧹 تنظيف</button>
+            </div>
+            <div class="storage-bar">
+                <div class="storage-used" id="storageBar" style="width: 0%"></div>
+            </div>
         </div>
 
-        <!-- الصفحة الرئيسية -->
+        <div class="alert" id="welcomeAlert" style="background: rgba(46, 213, 115, 0.1); border: 1px solid #2ed573; color: #2ed573; padding: 12px; border-radius: 30px; margin-bottom: 20px; text-align: center; display: none;">
+            ✅ مرحباً بك أيها المطور
+        </div>
+
         <div id="mainPage" class="main-page active">
-            <!-- قائمة المطور (تظهر فقط للمطور) -->
             <div class="developer-menu" id="devMenu" style="display: none;">
                 <div class="dev-title">⚙️ لوحة المطور</div>
                 <div class="dev-buttons">
@@ -1057,24 +1079,20 @@
                 </div>
             </div>
 
-            <!-- زر رفع المقاطع (يظهر فقط للمطور) -->
             <div class="upload-area" id="uploadArea" style="display: none;">
                 <button class="upload-btn" id="showUploadPageBtn">
-                    <span>📦</span> رفع مقاطع (بدون حدود)
+                    <span>📦</span> رفع مقاطع (بدون حدود - المطور فقط)
                 </button>
             </div>
 
-            <!-- إحصائيات -->
             <div class="stats">
                 <span>📁 إجمالي المقاطع</span>
                 <span class="info-value" id="totalVideos">0</span>
             </div>
 
-            <!-- شبكة المقاطع -->
             <div class="videos-grid" id="videosGrid"></div>
         </div>
 
-        <!-- صفحة إنشاء حساب (تظهر فقط للمطور) -->
         <div id="createUserPage" class="create-user-page">
             <h2>👤 إنشاء حساب جديد</h2>
             
@@ -1100,9 +1118,8 @@
             </div>
         </div>
 
-        <!-- صفحة رفع المقاطع - مع تحديد متعدد (تظهر فقط للمطور) -->
         <div id="uploadPage" class="upload-page">
-            <h2>📦 رفع مقاطع (تحديد متعدد)</h2>
+            <h2>📦 رفع مقاطع (تحديد متعدد - للمطور)</h2>
             
             <div class="upload-form">
                 <label class="file-label" for="fileInput" id="fileLabel">
@@ -1119,7 +1136,6 @@
             </div>
         </div>
 
-        <!-- صفحة نشر المقاطع (تظهر فقط للمطور) -->
         <div id="publishPage" class="publish-page">
             <h2>📢 نشر مقاطع محددة</h2>
             
@@ -1135,7 +1151,6 @@
         </div>
     </div>
 
-    <!-- نافذة عرض كلمة المرور -->
     <div class="password-modal" id="passwordModal">
         <div class="password-content">
             <div class="password-icon">🔐</div>
@@ -1150,19 +1165,17 @@
         </div>
     </div>
 
-    <!-- نافذة الاشتراك المنبثقة -->
     <div class="subscription-modal" id="subscriptionModal">
         <div class="subscription-content">
             <div class="subscription-icon">⏳</div>
             <div class="subscription-title">مدة الاشتراك</div>
             <div class="subscription-days" id="modalDaysLeft">∞</div>
             <div class="subscription-label">يوم</div>
-            <div class="subscription-date" id="modalExpiryDate">📅 حساب مطور</div>
+            <div class="subscription-date" id="modalExpiryDate">📅 حساب مطور (لا ينتهي)</div>
             <button class="subscription-close" id="closeSubscriptionModal">حسناً</button>
         </div>
     </div>
 
-    <!-- نافذة طلبات الاشتراك -->
     <div class="exit-modal" id="pendingModal">
         <div class="exit-content" style="max-width: 320px;">
             <h3>📋 طلبات الاشتراك</h3>
@@ -1171,7 +1184,6 @@
         </div>
     </div>
 
-    <!-- نافذة الخروج -->
     <div class="exit-modal" id="exitModal">
         <div class="exit-content">
             <h3>⚠️ تأكيد الخروج</h3>
@@ -1189,25 +1201,6 @@
         const DEVELOPER_PASSWORD = '1z5b';
         const DEVELOPER_NAME = 'ناي القوية';
 
-        // ========== بيانات ثابتة للمقاطع (تخزين داخل الكود) ==========
-        let videos = [
-            {
-                name: 'فيديو تعريفي 1',
-                url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-                date: '03-06'
-            },
-            {
-                name: 'فيديو تعريفي 2',
-                url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
-                date: '03-05'
-            },
-            {
-                name: 'شرح بايثون',
-                url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-                date: '03-04'
-            }
-        ];
-
         // ========== المستخدمون ==========
         let users = {
             [DEVELOPER_EMAIL]: {
@@ -1220,29 +1213,165 @@
         };
 
         // ========== المتغيرات ==========
+        let videos = [];
         let selectedFiles = [];
         let currentUser = null;
         let selectedForPublish = new Set();
 
-        // ========== التحقق من تسجيل الدخول ==========
-        function checkLogin() {
-            const savedUser = localStorage.getItem('hasryat_current_user');
-            if (savedUser) {
-                try {
-                    const user = JSON.parse(savedUser);
-                    if (users[user.email]) {
-                        currentUser = users[user.email];
-                        showMainApp(currentUser);
-                    } else {
-                        localStorage.removeItem('hasryat_current_user');
+        // ========== حفظ وتحميل المقاطع من IndexedDB (سعة أكبر) ==========
+        const DB_NAME = 'HasryatVideosDB';
+        const STORE_NAME = 'videos';
+        const DB_VERSION = 1;
+
+        function openDB() {
+            return new Promise((resolve, reject) => {
+                const request = indexedDB.open(DB_NAME, DB_VERSION);
+                
+                request.onerror = () => reject(request.error);
+                request.onsuccess = () => resolve(request.result);
+                
+                request.onupgradeneeded = (event) => {
+                    const db = event.target.result;
+                    if (!db.objectStoreNames.contains(STORE_NAME)) {
+                        db.createObjectStore(STORE_NAME, { keyPath: 'id', autoIncrement: true });
                     }
-                } catch (e) {
-                    localStorage.removeItem('hasryat_current_user');
-                }
+                };
+            });
+        }
+
+        async function loadVideosFromDB() {
+            try {
+                const db = await openDB();
+                return new Promise((resolve, reject) => {
+                    const transaction = db.transaction(STORE_NAME, 'readonly');
+                    const store = transaction.objectStore(STORE_NAME);
+                    const request = store.getAll();
+                    
+                    request.onsuccess = () => {
+                        const loadedVideos = request.result || [];
+                        resolve(loadedVideos);
+                    };
+                    request.onerror = () => reject(request.error);
+                });
+            } catch (e) {
+                console.log('خطأ في تحميل المقاطع، استخدام localStorage كبديل', e);
+                return loadVideosFromLocalStorage();
             }
         }
 
-        // عناصر DOM
+        function loadVideosFromLocalStorage() {
+            const savedVideos = localStorage.getItem('hasryat_videos');
+            if (savedVideos) {
+                try {
+                    return JSON.parse(savedVideos);
+                } catch (e) {
+                    return [];
+                }
+            }
+            return [
+                {
+                    id: Date.now(),
+                    name: 'فيديو تعريفي 1',
+                    url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
+                    date: '03-06'
+                },
+                {
+                    id: Date.now() + 1,
+                    name: 'فيديو تعريفي 2',
+                    url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4',
+                    date: '03-05'
+                },
+                {
+                    id: Date.now() + 2,
+                    name: 'شرح بايثون',
+                    url: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
+                    date: '03-04'
+                }
+            ];
+        }
+
+        async function saveVideosToDB() {
+            try {
+                const db = await openDB();
+                const transaction = db.transaction(STORE_NAME, 'readwrite');
+                const store = transaction.objectStore(STORE_NAME);
+                
+                // مسح البيانات القديمة
+                store.clear();
+                
+                // حفظ كل فيديو
+                videos.forEach(video => {
+                    store.add(video);
+                });
+                
+                return new Promise((resolve, reject) => {
+                    transaction.oncomplete = () => resolve();
+                    transaction.onerror = () => reject(transaction.error);
+                });
+            } catch (e) {
+                console.log('خطأ في حفظ المقاطع، استخدام localStorage كبديل', e);
+                localStorage.setItem('hasryat_videos', JSON.stringify(videos));
+            }
+        }
+
+        async function initVideos() {
+            videos = await loadVideosFromDB();
+            if (videos.length === 0) {
+                videos = loadVideosFromLocalStorage();
+                await saveVideosToDB();
+            }
+            renderVideos();
+            updateStorageInfo();
+        }
+
+        async function addVideo(videoData) {
+            videoData.id = Date.now() + Math.random();
+            videos.push(videoData);
+            await saveVideosToDB();
+            renderVideos();
+            updateStorageInfo();
+        }
+
+        async function deleteVideo(index) {
+            if (!currentUser?.isDeveloper) {
+                alert('❌ الحذف متاح فقط للمطور');
+                return;
+            }
+            
+            if (confirm('هل أنت متأكد من حذف هذا المقطع؟')) {
+                videos.splice(index, 1);
+                await saveVideosToDB();
+                renderVideos();
+                updateStorageInfo();
+            }
+        }
+
+        // ========== حساب المساحة المستخدمة ==========
+        function updateStorageInfo() {
+            try {
+                let totalSize = 0;
+                videos.forEach(video => {
+                    if (video.url && video.url.startsWith('data:')) {
+                        // حجم الـ base64 تقريباً
+                        totalSize += Math.ceil(video.url.length * 0.75);
+                    }
+                });
+                
+                const sizeMB = (totalSize / (1024 * 1024)).toFixed(2);
+                document.getElementById('usedStorage').textContent = sizeMB;
+                
+                const percentage = Math.min(100, (totalSize / (50 * 1024 * 1024)) * 100);
+                document.getElementById('storageBar').style.width = percentage + '%';
+                
+                if (percentage > 90) {
+                    document.getElementById('storageInfo').style.background = '#442222';
+                }
+            } catch (e) {
+                console.log('خطأ في حساب المساحة');
+            }
+        }
+
+        // ========== عناصر DOM ==========
         const loginPage = document.getElementById('loginPage');
         const mainApp = document.getElementById('mainApp');
         const loginForm = document.getElementById('loginForm');
@@ -1311,32 +1440,47 @@
         const exitModal = document.getElementById('exitModal');
         const confirmExit = document.getElementById('confirmExit');
         const cancelExit = document.getElementById('cancelExit');
+        
+        const clearStorageBtn = document.getElementById('clearStorageBtn');
 
-        // ========== عرض التطبيق الرئيسي ==========
+        // ========== التحقق من تسجيل الدخول ==========
+        function checkLogin() {
+            const savedUser = localStorage.getItem('hasryat_current_user');
+            if (savedUser) {
+                try {
+                    const user = JSON.parse(savedUser);
+                    if (users[user.email]) {
+                        currentUser = users[user.email];
+                        showMainApp(currentUser);
+                    } else {
+                        localStorage.removeItem('hasryat_current_user');
+                    }
+                } catch (e) {
+                    localStorage.removeItem('hasryat_current_user');
+                }
+            }
+        }
+
         function showMainApp(user) {
             currentUser = user;
             loginPage.style.display = 'none';
             mainApp.style.display = 'block';
             animatedHeader.style.display = 'block';
             
-            // عرض معلومات المستخدم
             userEmailText.textContent = user.name;
             userNameDisplay.textContent = user.name;
             
             if (user.isDeveloper) {
-                // للمطور: علامة توثيق + إظهار عناصر المطور
                 verifiedBadge.style.display = 'inline';
                 devBadge.style.display = 'flex';
                 
-                // إظهار عناصر المطور
-                if (devMenu) devMenu.style.display = 'none'; // مخفي في البداية
+                if (devMenu) devMenu.style.display = 'none';
                 if (uploadArea) uploadArea.style.display = 'block';
                 
                 daysLeft.textContent = '∞';
                 modalDaysLeft.textContent = '∞';
                 modalExpiryDate.textContent = '📅 حساب مطور (لا ينتهي)';
             } else {
-                // للمستخدم العادي: إخفاء كل عناصر المطور
                 verifiedBadge.style.display = 'none';
                 devBadge.style.display = 'none';
                 if (devMenu) devMenu.style.display = 'none';
@@ -1357,8 +1501,6 @@
             setTimeout(() => {
                 welcomeAlert.style.display = 'none';
             }, 3000);
-            
-            renderVideos();
         }
 
         // ========== تسجيل الدخول ==========
@@ -1391,7 +1533,7 @@
             }
         });
 
-        // ========== إنشاء حساب جديد (للمطور فقط) ==========
+        // ========== إنشاء حساب جديد ==========
         createUserBtn.addEventListener('click', () => {
             if (!currentUser?.isDeveloper) {
                 alert('❌ هذه الصفحة للمطور فقط');
@@ -1438,7 +1580,6 @@
                 expiresAt: expiresAt.toISOString()
             };
             
-            // عرض كلمة المرور
             newUserEmailDisplay.textContent = email;
             newUserPassword.textContent = password;
             newUserExpiry.textContent = `📅 تنتهي: ${expiresAt.toLocaleDateString('ar-EG')}`;
@@ -1466,7 +1607,7 @@
             videosGrid.innerHTML = '';
             
             if (videos.length === 0) {
-                videosGrid.innerHTML = '<div class="empty-state" style="grid-column:1/-1; text-align:center; padding:60px; color:#333; font-size:60px;">🎥</div>';
+                videosGrid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:60px; color:#333; font-size:60px;">🎥</div>';
                 return;
             }
             
@@ -1477,7 +1618,6 @@
                 let actionsHtml = '';
                 
                 if (currentUser?.isDeveloper) {
-                    // للمطور: أيقونات كاملة
                     actionsHtml = `
                         <div class="video-actions">
                             <span class="play-icon" onclick="event.stopPropagation(); playVideo('${video.url}', '${video.name}')">▶️</span>
@@ -1486,7 +1626,6 @@
                         </div>
                     `;
                 } else {
-                    // للمستخدم العادي: تشغيل فقط
                     actionsHtml = `
                         <span class="play-icon" onclick="event.stopPropagation(); playVideo('${video.url}', '${video.name}')">▶️</span>
                     `;
@@ -1495,7 +1634,7 @@
                 videoCard.innerHTML = `
                     <div class="thumbnail">
                         🎬
-                        <div class="video-date">${video.date}</div>
+                        <div class="video-date">${video.date || '03-06'}</div>
                     </div>
                     <div class="video-footer">
                         <span class="video-name">${video.name.substring(0, 15)}${video.name.length > 15 ? '...' : ''}</span>
@@ -1513,7 +1652,155 @@
             }
         }
 
-        // ========== صفحة النشر (للمطور فقط) ==========
+        // ========== تشغيل الفيديو ==========
+        window.playVideo = function(url, name) {
+            const videoWindow = window.open('', '_blank');
+            videoWindow.document.write(`
+                <html dir="rtl">
+                <head>
+                    <title>${name}</title>
+                    <style>
+                        body { margin:0; background:#000; display:flex; align-items:center; justify-content:center; height:100vh; font-family:Arial; }
+                        video { max-width:100%; max-height:100%; }
+                        .back-btn { position:absolute; top:20px; right:20px; color:white; text-decoration:none; background:#333; padding:10px 20px; border-radius:30px; }
+                    </style>
+                </head>
+                <body>
+                    <a href="#" class="back-btn" onclick="window.close()">← رجوع</a>
+                    <video controls autoplay>
+                        <source src="${url}" type="video/mp4">
+                    </video>
+                </body>
+                </html>
+            `);
+        };
+
+        // ========== تحميل الفيديو ==========
+        window.downloadVideo = function(url, filename) {
+            if (!currentUser?.isDeveloper) {
+                alert('❌ التحميل متاح فقط للمطور');
+                return;
+            }
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        };
+
+        // ========== حذف الفيديو ==========
+        window.deleteVideo = deleteVideo;
+
+        // ========== رفع الملفات ==========
+        function resetUploadForm() {
+            selectedFiles = [];
+            if (fileInput) fileInput.value = '';
+            if (fileLabel) fileLabel.innerHTML = '📁';
+            if (counter) counter.innerHTML = '0 مقطع';
+            if (filesList) filesList.innerHTML = '';
+            if (uploadSubmitBtn) uploadSubmitBtn.disabled = true;
+        }
+
+        if (fileInput) {
+            fileInput.addEventListener('change', updateFilesList);
+        }
+
+        function updateFilesList() {
+            if (!filesList || !counter || !fileLabel || !uploadSubmitBtn) return;
+            
+            filesList.innerHTML = '';
+            selectedFiles = Array.from(fileInput.files);
+            
+            counter.innerHTML = selectedFiles.length + ' مقطع';
+            
+            if (selectedFiles.length > 0) {
+                uploadSubmitBtn.disabled = false;
+                fileLabel.innerHTML = '✅ ' + selectedFiles.length;
+            } else {
+                uploadSubmitBtn.disabled = true;
+                fileLabel.innerHTML = '📁';
+            }
+            
+            selectedFiles.forEach((file, index) => {
+                const fileItem = document.createElement('div');
+                fileItem.className = 'file-item';
+                fileItem.id = 'file-' + index;
+                fileItem.innerHTML = `
+                    <span>${index+1}. ${file.name.substring(0,30)}${file.name.length > 30 ? '...' : ''}</span>
+                    <div class="status pending" id="status-${index}">⏳</div>
+                `;
+                filesList.appendChild(fileItem);
+            });
+        }
+
+        if (uploadSubmitBtn) {
+            uploadSubmitBtn.addEventListener('click', function() {
+                if (!currentUser?.isDeveloper) {
+                    alert('❌ هذه الصفحة للمطور فقط');
+                    return;
+                }
+                
+                if (selectedFiles.length === 0) return;
+                
+                uploadSubmitBtn.disabled = true;
+                fileInput.disabled = true;
+                
+                const filePromises = [];
+                
+                for (let i = 0; i < selectedFiles.length; i++) {
+                    const file = selectedFiles[i];
+                    
+                    const promise = new Promise((resolve) => {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            const fileData = e.target.result;
+                            const today = new Date();
+                            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                            const day = today.getDate().toString().padStart(2, '0');
+                            
+                            resolve({
+                                name: file.name,
+                                url: fileData,
+                                date: `${month}-${day}`,
+                                type: file.type
+                            });
+                        };
+                        reader.readAsDataURL(file);
+                    });
+                    
+                    filePromises.push(promise);
+                    
+                    const statusEl = document.getElementById('status-' + i);
+                    if (statusEl) {
+                        statusEl.className = 'status success';
+                        statusEl.innerHTML = '✅';
+                    }
+                }
+                
+                Promise.all(filePromises).then(async (results) => {
+                    for (const videoData of results) {
+                        await addVideo(videoData);
+                    }
+                    
+                    setTimeout(() => {
+                        mainPage.classList.add('active');
+                        uploadPage.classList.remove('active');
+                        resetUploadForm();
+                        fileInput.disabled = false;
+                        
+                        welcomeAlert.style.display = 'block';
+                        welcomeAlert.innerHTML = '✅ تم رفع المقاطع وحفظها بنجاح!';
+                        setTimeout(() => {
+                            welcomeAlert.style.display = 'none';
+                        }, 3000);
+                    }, 500);
+                });
+            });
+        }
+
+        // ========== صفحة النشر ==========
         function renderPublishGrid() {
             if (!publishGrid) return;
             
@@ -1581,58 +1868,7 @@
             selectedForPublish.clear();
         }
 
-        // ========== تشغيل الفيديو ==========
-        window.playVideo = function(url, name) {
-            const videoWindow = window.open('', '_blank');
-            videoWindow.document.write(`
-                <html dir="rtl">
-                <head>
-                    <title>${name}</title>
-                    <style>
-                        body { margin:0; background:#000; display:flex; align-items:center; justify-content:center; height:100vh; font-family:Arial; }
-                        video { max-width:100%; max-height:100%; }
-                        .back-btn { position:absolute; top:20px; right:20px; color:white; text-decoration:none; background:#333; padding:10px 20px; border-radius:30px; }
-                    </style>
-                </head>
-                <body>
-                    <a href="#" class="back-btn" onclick="window.close()">← رجوع</a>
-                    <video controls autoplay>
-                        <source src="${url}" type="video/mp4">
-                    </video>
-                </body>
-                </html>
-            `);
-        };
-
-        // ========== حذف الفيديو (للمطور فقط) ==========
-        window.deleteVideo = function(index) {
-            if (!currentUser?.isDeveloper) {
-                alert('❌ الحذف متاح فقط للمطور');
-                return;
-            }
-            
-            if (confirm('هل أنت متأكد من حذف هذا المقطع؟')) {
-                videos.splice(index, 1);
-                renderVideos();
-            }
-        };
-
-        // ========== تحميل الفيديو (للمطور فقط) ==========
-        window.downloadVideo = function(url, filename) {
-            if (!currentUser?.isDeveloper) {
-                alert('❌ التحميل متاح فقط للمطور');
-                return;
-            }
-            
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = filename;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        };
-
-        // ========== إظهار صفحة الرفع (للمطور فقط) ==========
+        // ========== إظهار الصفحات ==========
         if (showUploadPageBtn) {
             showUploadPageBtn.addEventListener('click', () => {
                 if (!currentUser?.isDeveloper) {
@@ -1644,7 +1880,6 @@
             });
         }
 
-        // ========== إظهار صفحة النشر (للمطور فقط) ==========
         if (showPublishPageBtn) {
             showPublishPageBtn.addEventListener('click', () => {
                 if (!currentUser?.isDeveloper) {
@@ -1658,7 +1893,6 @@
             });
         }
 
-        // ========== العودة للصفحة الرئيسية ==========
         if (backToMainBtn) {
             backToMainBtn.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -1709,99 +1943,7 @@
             });
         }
 
-        // ========== رفع الملفات (للمطور فقط) ==========
-        function resetUploadForm() {
-            selectedFiles = [];
-            if (fileInput) fileInput.value = '';
-            if (fileLabel) fileLabel.innerHTML = '📁';
-            if (counter) counter.innerHTML = '0 مقطع';
-            if (filesList) filesList.innerHTML = '';
-            if (uploadSubmitBtn) uploadSubmitBtn.disabled = true;
-        }
-
-        if (fileInput) {
-            fileInput.addEventListener('change', updateFilesList);
-        }
-
-        function updateFilesList() {
-            if (!filesList || !counter || !fileLabel || !uploadSubmitBtn) return;
-            
-            filesList.innerHTML = '';
-            selectedFiles = Array.from(fileInput.files);
-            
-            counter.innerHTML = selectedFiles.length + ' مقطع';
-            
-            if (selectedFiles.length > 0) {
-                uploadSubmitBtn.disabled = false;
-                fileLabel.innerHTML = '✅ ' + selectedFiles.length;
-            } else {
-                uploadSubmitBtn.disabled = true;
-                fileLabel.innerHTML = '📁';
-            }
-            
-            selectedFiles.forEach((file, index) => {
-                const fileItem = document.createElement('div');
-                fileItem.className = 'file-item';
-                fileItem.id = 'file-' + index;
-                fileItem.innerHTML = `
-                    <span>${index+1}. ${file.name.substring(0,30)}${file.name.length > 30 ? '...' : ''}</span>
-                    <div class="status pending" id="status-${index}">⏳</div>
-                `;
-                filesList.appendChild(fileItem);
-            });
-        }
-
-        if (uploadSubmitBtn) {
-            uploadSubmitBtn.addEventListener('click', function() {
-                if (!currentUser?.isDeveloper) {
-                    alert('❌ هذه الصفحة للمطور فقط');
-                    return;
-                }
-                
-                if (selectedFiles.length === 0) return;
-                
-                uploadSubmitBtn.disabled = true;
-                fileInput.disabled = true;
-                
-                for (let i = 0; i < selectedFiles.length; i++) {
-                    const file = selectedFiles[i];
-                    const fileUrl = URL.createObjectURL(file);
-                    const today = new Date();
-                    const month = (today.getMonth() + 1).toString().padStart(2, '0');
-                    const day = today.getDate().toString().padStart(2, '0');
-                    
-                    videos.push({
-                        name: file.name,
-                        url: fileUrl,
-                        date: `${month}-${day}`
-                    });
-                    
-                    const statusEl = document.getElementById('status-' + i);
-                    if (statusEl) {
-                        statusEl.className = 'status success';
-                        statusEl.innerHTML = '✅';
-                    }
-                }
-                
-                renderVideos();
-                
-                setTimeout(() => {
-                    mainPage.classList.add('active');
-                    uploadPage.classList.remove('active');
-                    resetUploadForm();
-                    fileInput.disabled = false;
-                    
-                    welcomeAlert.style.display = 'block';
-                    welcomeAlert.innerHTML = '✅ تم رفع المقاطع بنجاح!';
-                    setTimeout(() => {
-                        welcomeAlert.style.display = 'none';
-                    }, 3000);
-                }, 500);
-            });
-        }
-
         // ========== نوافذ منبثقة ==========
-        
         if (subscriptionInfo) {
             subscriptionInfo.addEventListener('click', () => {
                 subscriptionModal.classList.add('active');
@@ -1814,7 +1956,6 @@
             });
         }
 
-        // قائمة المطور (تظهر فقط للمطور)
         if (devBadge) {
             devBadge.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -1832,7 +1973,6 @@
             });
         }
 
-        // طلبات الاشتراك (للمطور فقط)
         if (pendingRequestsBtn) {
             pendingRequestsBtn.addEventListener('click', () => {
                 if (!currentUser?.isDeveloper) {
@@ -1869,7 +2009,6 @@
             });
         }
 
-        // نافذة الخروج
         if (logoutBtn) {
             logoutBtn.addEventListener('click', () => {
                 exitModal.classList.add('active');
@@ -1893,21 +2032,23 @@
             });
         }
 
+        if (clearStorageBtn) {
+            clearStorageBtn.addEventListener('click', async () => {
+                if (confirm('هل تريد حذف جميع المقاطع المحفوظة؟')) {
+                    videos = [];
+                    await saveVideosToDB();
+                    renderVideos();
+                    updateStorageInfo();
+                }
+            });
+        }
+
         window.addEventListener('click', (e) => {
             if (e.target === exitModal) exitModal.classList.remove('active');
             if (e.target === subscriptionModal) subscriptionModal.classList.remove('active');
             if (e.target === pendingModal) pendingModal.classList.remove('active');
             if (e.target === passwordModal) passwordModal.classList.remove('active');
         });
-
-        // منع زر الرجوع
-        history.pushState(null, null, location.href);
-        window.onpopstate = function () {
-            if (mainApp.style.display === 'block') {
-                exitModal.classList.add('active');
-            }
-            history.pushState(null, null, location.href);
-        };
 
         // منع القائمة اليمنى والنسخ
         document.addEventListener('contextmenu', (e) => e.preventDefault());
@@ -1921,8 +2062,8 @@
         });
 
         // ========== بدء التشغيل ==========
+        initVideos();
         checkLogin();
-        renderVideos();
     </script>
 </body>
 </html>
